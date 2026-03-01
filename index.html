@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bolt-green: #00FF66; /* Vibrant Bolt Green from logo */
-            --bolt-black: #0B0E11; /* Deep Bolt Charcoal background */
+            --bolt-green: #00FF66; /* Official High-Vibrancy Green */
+            --bolt-black: #0B0E11; /* Bolt Site Background */
             --card-bg: #15191E;
             --white: #ffffff;
             --gray-text: #9BA3AF;
@@ -18,20 +18,17 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--bolt-black);
             color: var(--white);
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             line-height: 1.5;
         }
 
-        /* Age Verification Overlay */
+        /* Age Verification */
         #age-gate {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--);
+            background: var(--bolt-black);
             z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             text-align: center;
         }
 
@@ -43,134 +40,64 @@
             border: 1px solid rgba(255,255,255,0.05);
         }
 
-        .logo-gate {
-            width: 180px;
-            margin-bottom: 25px;
-        }
+        .logo-gate { width: 180px; margin-bottom: 25px; }
 
         .btn-gate {
             background: var(--bolt-green);
-            color: #000;
-            border: none;
-            padding: 18px 40px;
-            border-radius: 14px;
-            font-weight: 800;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1rem;
-            transition: transform 0.2s;
+            color: #000; border: none;
+            padding: 18px 40px; border-radius: 14px;
+            font-weight: 800; cursor: pointer; width: 100%;
         }
 
-        /* Header Navigation */
+        /* Header */
         nav {
-            padding: 25px;
-            text-align: center;
+            padding: 25px; text-align: center;
             background: rgba(11, 14, 17, 0.95);
             border-bottom: 1px solid rgba(255,255,255,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            position: sticky; top: 0; z-index: 100;
         }
 
-        .nav-logo {
-            height: 40px;
-        }
+        .nav-logo { height: 40px; }
 
-        /* Main Content */
-        .container {
-            max-width: 550px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        /* Content */
+        .container { max-width: 550px; margin: 0 auto; padding: 40px 20px; }
 
         .hero-title {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 900;
-            letter-spacing: -1.5px;
-            margin-bottom: 10px;
+            text-align: center; font-size: 2.2rem; font-weight: 900;
+            letter-spacing: -1.5px; margin-bottom: 10px;
         }
 
         .hero-title span { color: var(--bolt-green); }
 
-        .tagline {
-            text-align: center;
-            color: var(--gray-text);
-            font-size: 1rem;
-            margin-bottom: 40px;
-        }
+        .tagline { text-align: center; color: var(--gray-text); margin-bottom: 40px; }
 
         .offer-card {
-            background: var(--card-bg);
-            border-radius: 32px;
-            padding: 40px;
+            background: var(--card-bg); border-radius: 32px;
+            padding: 40px; text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.03);
-            text-align: center;
             box-shadow: 0 30px 60px -12px rgba(0,0,0,0.6);
         }
 
         .bonus-headline {
-            font-weight: 900;
-            font-size: 3.5rem;
-            color: var(--bolt-green);
-            margin: 10px 0;
-            text-shadow: 0 0 30px rgba(0, 255, 102, 0.2);
+            font-weight: 900; font-size: 3.5rem;
+            color: var(--bolt-green); margin: 10px 0;
         }
 
-        /* Features List */
         .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 30px 0;
-            text-align: left;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 15px; margin: 30px 0; text-align: left;
         }
 
-        .feature {
-            font-size: 0.9rem;
-            color: var(--gray-text);
-            display: flex;
-            align-items: center;
-        }
+        .feature { font-size: 0.9rem; color: var(--gray-text); display: flex; align-items: center; }
+        .feature::before { content: '✓'; color: var(--bolt-green); margin-right: 10px; font-weight: bold; }
 
-        .feature::before {
-            content: '✓';
-            color: var(--bolt-green);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        /* CTA Button */
         .cta-bolt {
-            display: block;
-            background: var(--bolt-green);
-            color: #000;
-            text-decoration: none;
-            padding: 22px;
-            border-radius: 20px;
-            font-weight: 900;
-            font-size: 1.3rem;
-            box-shadow: 0 10px 25px rgba(0, 255, 102, 0.2);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: block; background: var(--bolt-green); color: #000;
+            text-decoration: none; padding: 22px; border-radius: 20px;
+            font-weight: 900; font-size: 1.3rem;
         }
 
-        .cta-bolt:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 35px rgba(0, 255, 102, 0.4);
-        }
-
-        footer {
-            margin-top: 60px;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #4B5563;
-        }
-
-        .compliance-text {
-            border-top: 1px solid #1F2937;
-            padding-top: 30px;
-            line-height: 1.8;
-        }
+        footer { margin-top: 60px; text-align: center; font-size: 0.75rem; color: #4B5563; }
     </style>
 </head>
 <body>
@@ -178,8 +105,8 @@
     <div id="age-gate">
         <div class="gate-box">
             <img src="Bolt-black_no background.png" alt="Bolt Casino" class="logo-gate">
-            <p><strong>Identity Verification</strong><br>You must be 18+ to access this platform.</p>
-            <button class="btn-gate" onclick="unlock()">ENTER BOLT CASINO</button>
+            <p><strong>Identity Verification</strong><br>You must be 18+ to access the Bolt platform.</p>
+            <button class="btn-gate" onclick="document.getElementById('age-gate').style.display='none'">ENTER BOLT CASINO</button>
         </div>
     </div>
 
@@ -189,38 +116,31 @@
 
     <div class="container">
         <div class="hero-title">Lightning <span>Fast</span> Payouts.</div>
-        <div class="tagline">The world's most accessible crypto-native casino.</div>
+        <div class="tagline">The most accessible blockchain-native casino.</div>
 
         <div class="offer-card">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 800; font-size: 0.75rem; color: var(--gray-text);">Verified New Player Offer</p>
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 800; font-size: 0.75rem; color: var(--gray-text);">Verified Affiliate Offer</p>
             <div class="bonus-headline">200% BONUS</div>
             <p style="font-weight: 700; color: var(--bolt-green); font-size: 1.1rem; margin-top: -15px;">+ DAILY RAKEBACK</p>
 
             <div class="feature-grid">
-                <div class="feature">Instant Payouts</div>
-                <div class="feature">Provably Fair</div>
+                <div class="feature">Instant Crypto Payouts</div>
+                <div class="feature">Blockchain Verified</div>
                 <div class="feature">No Deposit Fees</div>
-                <div class="feature">Privacy Focused</div>
+                <div class="feature">Libertarian at Heart</div>
             </div>
 
             <a href="https://bolt-casino.com?r=D875DDE40E" class="cta-bolt">JOIN THE ELITE →</a>
             
-            <p style="font-size: 0.7rem; color: var(--gray-text); margin-top: 25px;">No KYC required for standard withdrawals. Instant processing via USDT, BTC, & ETH.</p>
+            <p style="font-size: 0.7rem; color: var(--gray-text); margin-top: 25px;">Standard withdrawals are 100% private. Supports USDT, BTC, & ETH.</p>
         </div>
 
         <footer>
-            <div class="compliance-text">
-                <p><strong>RESPONSIBLE GAMING</strong></p>
-                <p>Bolt is a libertarian-focused gaming platform operating on the blockchain. 18+ Only. Play with what you can afford to lose. This is an independent review and referral site.</p>
-                <p>© 2026 Bolt Gaming Network. All rights reserved.</p>
-            </div>
+            <p><strong>18+ RESPONSIBLE GAMING</strong></p>
+            <p>Bolt is a crypto-native gaming platform. Play responsibly. This is an independent referral site.</p>
+            <p>© 2026 Bolt Gaming Network.</p>
         </footer>
     </div>
 
-    <script>
-        function unlock() {
-            document.getElementById('age-gate').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
